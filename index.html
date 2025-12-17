@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="light" />
-  <title>Kinh Quán Thế Âm Bồ Tát</title>
-  <meta name="description" content= "Toàn bộ kinh trì chú của "Kinh Bạch Y Cứu Khổ – Chú Đại Bi – Chú Chuẩn Đề – Bát Nhã Tâm Kinh" và file PDF để tải về." />
+  <title>Thỉnh kinh Quán Thế Âm Bồ Tát</title>
+  <meta name="description" content="Toàn bộ kinh trì chú : "Kinh Bạch Y Cứu Khổ – Chú Đại Bi – Chú Chuẩn Đề – Bát Nhã Tâm Kinh", và file PDF để tải về." />
 
   <style>
     :root{
@@ -71,4 +71,238 @@
     }
     .sub{
       margin:0 0 16px;
-      color:var
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, .06);
+    }
+    .btn.primary{
+      background:linear-gradient(180deg, var(--accent), var(--accent2));
+      color:#fff;
+      border-color:transparent;
+      box-shadow: 0 14px 30px rgba(37,99,235,.22);
+    }
+    .btn:active{transform:translateY(1px)}
+
+    .coverWrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .cover{
+      width:100%;
+      max-width:320px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:14px;
+    }
+    .cover img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      background:#fff;
+    }
+    .coverCap{
+      margin-top:10px;
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .main{
+      margin-top:18px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.92);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .mainHead{
+      padding:16px 20px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .mainHead h2{
+      margin:0;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+
+    /* Sửa phần “ô chữ” cho tương xứng: giới hạn độ dài dòng + padding chuẩn */
+    .content{
+      padding:18px 20px 22px;
+    }
+    .prose{
+      max-width:78ch;          /* không kéo chữ quá rộng */
+      margin:0;
+    }
+    .section{
+      padding:14px 0;
+      border-bottom:1px dashed rgba(91,103,122,.25);
+      scroll-margin-top:18px;
+    }
+    .section:last-child{border-bottom:none}
+    .section h3{
+      margin:0 0 10px;
+      font-size:18px;
+      line-height:1.3;
+    }
+
+    /* Hiển thị kinh dạng “trang” đẹp hơn: vẫn giữ xuống dòng, nhưng không bị nhìn như căn chỉnh lỗi */
+    .verse{
+      margin:0;
+      padding:14px 14px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(37,99,235,.05), rgba(14,165,233,.03));
+      white-space:pre-wrap;
+      font-family:var(--mono);
+      font-size:13.5px;
+      line-height:1.7;
+      color:#0b1220;
+    }
+
+    footer{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .credit{
+      font-weight:700;
+      color:#334155;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="heroGrid">
+        <div>
+          <h1>Thỉnh kinh Quán Thế Âm Bồ Tát</h1>
+          <p class="sub">
+            Trang này chứa toàn văn: <b>Kinh Bạch Y Cứu Khổ – Chú Đại Bi – Chú Chuẩn Đề – Bát Nhã Tâm Kinh</b>, và file PDF để tải về.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="Kinh-Bach-Y-Cuu-Kho.pdf" download>Tải PDF</a>
+            <a class="btn" href="#toan-van">Đọc toàn văn</a>
+          </div>
+        </div>
+
+        <div class="coverWrap">
+          <div class="cover">
+            <!-- Đặt ảnh bìa cùng cấp index.html với tên cover-quan-am.png -->
+            <img src="cover-quan-am.png" alt="Bìa Quán Thế Âm Bồ Tát" />
+            <div class="coverCap">Quán Thế Âm Bồ Tát</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main" id="toan-van">
+      <div class="mainHead">
+        <h2>Toàn văn</h2>
+      </div>
+
+      <div class="content">
+        <div class="prose">
+
+          <section class="section" id="loi-noi-dau">
+            <h3>Lời nói đầu</h3>
+            <pre class="verse">Trì Niệm Chú là những lời Bí Huyết của Ðức Phật
+và Chư Tổ, Chú có rất nhiều công năng 
+huyền diệu và mầu nhiệm phi thường.
+Những người nhứt tâm chuyên trì tụng niệm 
+sẽ đạt được nhiều kết quả mỹ mãn.
+Bạch Y Thần Chú thường xuyên tụng niệm sẽ 
+cầu chi được nấy. Còn Chú Ðại Bi và
+Chú Chuẩn Ðề để trừ tà ma trì niệm được 
+tăng sùng phúc đức, sở nguyện đắc thành.</pre>
+          </section>
+
+          <section class="section" id="tinh">
+            <h3>Kinh Bạch Y Cứu Khổ – phần tịnh</h3>
+            <pre class="verse">TỊNH PHÁP GIỚI CHƠN NGÔN
+Án lam tóa ha (3 lần)
+
+TỊNH KHẨU NGHIỆP CHƠN NGÔN
+Tu rịtu ri, ma ha tu rị, tu tu rị, ta bà ha (3 lần)
+
+TỊNH TAM NGHIỆP CHƠN NGÔN
+Án,ta phạ bà phạ,thuật đà ta phạ, đạt mạ ta phạ,
+bà phạ thuật độhám. (3 lần)</pre>
+          </section>
+
+          <section class="section" id="thinh-cau">
+            <h3>Thỉnh cầu</h3>
+            <pre class="verse">(Ðọc lời thỉnh cầu trước khi đọc Chú Ðại Bi)
+Thỉnh cầu Nam Mô Ðại Từ Ðại Bi Cứu Khổ 
+Cứu Nạn Quảng Ðại Linh Cảm Quán Thế Âm 
+Bồ Tát Ma Ha Tát, phù hộ cho con (họ tên) 
+thân thể khỏe mạnh, tăng cường công lực, để 
+bản thân con có đủ năng lượng đọc tụng các 
+Kinh, Chú khác.
+
+Đọc chú:
+Nam mô Ðại Bi Hội Thượng Phật Bồ Tát (3 lần)
+Thiên thủ thiên nhãn vô ngại Ðại bi tâm đà la ni</pre>
+          </section>
+
+          <section class="section" id="chu-dai-bi">
+            <h3>Chú Đại Bi</h3>
+            <pre class="verse">[Giữ nguyên nội dung như file PDF của mày – dán toàn bộ đoạn Chú Đại Bi vào đây]</pre>
+          </section>
+
+          <section class="section" id="bat-nha">
+            <h3>Ma Ha Bát Nhã Ba La Mật Đa Tâm Kinh</h3>
+            <pre class="verse">[Giữ nguyên nội dung như file PDF của mày – dán toàn bộ Bát Nhã Tâm Kinh vào đây]</pre>
+          </section>
+
+          <section class="section" id="hoi-huong">
+            <h3>Hồi hướng</h3>
+            <pre class="verse">[Giữ nguyên nội dung như file PDF của mày – dán phần hồi hướng vào đây]</pre>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© Nội dung theo bản kinh trong PDF.</div>
+      <div class="credit">Thạnh Vương</div>
+    </footer>
+  </div>
+</body>
+</html>
