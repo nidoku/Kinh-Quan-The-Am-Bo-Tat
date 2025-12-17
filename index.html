@@ -3,124 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <title>Kinh Bạch Y Cứu Khổ – PDF</title>
+  <meta name="color-scheme" content="light" />
+  <title>Kinh Quán Thế Âm Bồ Tát</title>
+  <meta name="description" content= "Toàn bộ kinh trì chú của "Kinh Bạch Y Cứu Khổ – Chú Đại Bi – Chú Chuẩn Đề – Bát Nhã Tâm Kinh" và file PDF để tải về." />
+
   <style>
-    :root{ --bg:#0b0d10; --fg:#e9eef5; --muted:#a9b4c3; --card:#12161c; --border:#263041; --btn:#1f6feb; }
-    @media (prefers-color-scheme: light){ :root{ --bg:#f6f7f9; --fg:#0b1220; --muted:#4b5563; --card:#ffffff; --border:#e5e7eb; --btn:#1f6feb; } }
+    :root{
+      --bg0:#f4faff;
+      --bg1:#ffffff;
+      --ink:#0b1220;
+      --muted:#5b677a;
+      --card:#ffffff;
+      --border:#e6eef7;
+      --shadow: 0 18px 50px rgba(15, 23, 42, .08);
+      --accent:#2563eb;
+      --accent2:#1d4ed8;
+      --radius:20px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
     *{box-sizing:border-box}
-    body{ margin:0; background:var(--bg); color:var(--fg); font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 14px 60px; }
-    .top{ border:1px solid var(--border); background:var(--card); border-radius:14px; padding:14px; position:sticky; top:10px; z-index:5; }
-    .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
-    a.btn, button.btn{
-      border:1px solid var(--border); background:transparent; color:var(--fg);
-      padding:9px 12px; border-radius:12px; cursor:pointer; text-decoration:none; font-weight:650;
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(37,99,235,.14), transparent 55%),
+        radial-gradient(900px 450px at 85% 10%, rgba(14,165,233,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height:1.7;
     }
-    a.btn.primary{ background:var(--btn); border-color:transparent; color:#fff; }
-    .muted{ color:var(--muted); font-size:13px; }
-    .status{ margin-left:auto; color:var(--muted); font-size:13px; }
-    .pages{ margin-top:14px; display:grid; gap:14px; }
-    .page{
-      border:1px solid var(--border); background:var(--card);
-      border-radius:14px; padding:10px;
+
+    a{color:inherit}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 16px 60px;
     }
-    canvas{ width:100%; height:auto; display:block; border-radius:10px; }
-    .err{ color:#ffb4b4; white-space:pre-wrap; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="top">
-      <div class="row">
-        <a class="btn primary" href="Kinh-Bach-Y-Cuu-Kho.pdf" download>Tải PDF</a>
-        <a class="btn" href="Kinh-Bach-Y-Cuu-Kho.pdf" target="_blank" rel="noopener">Mở PDF tab mới</a>
-        <button class="btn" id="copy">Copy link</button>
-        <a class="btn" id="fb" target="_blank" rel="noopener">Share Facebook</a>
-        <div class="status" id="status">Ready</div>
-      </div>
-      <div class="muted">Landing page render trực tiếp PDF (bố cục + hình ảnh đúng như file).</div>
-    </div>
 
-    <div class="pages" id="pages"></div>
-    <div id="error" class="err"></div>
-  </div>
-
-  <script type="module">
-    const PDF_URL = "Kinh-Bach-Y-Cuu-Kho.pdf";
-
-    const statusEl = document.getElementById("status");
-    const pagesEl  = document.getElementById("pages");
-    const errEl    = document.getElementById("error");
-    const copyBtn  = document.getElementById("copy");
-    const fbLink   = document.getElementById("fb");
-
-    const pageUrl = () => window.location.href.split("#")[0];
-
-    fbLink.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl());
-
-    copyBtn.addEventListener("click", async () => {
-      try { await navigator.clipboard.writeText(pageUrl()); statusEl.textContent = "Copied"; }
-      catch { statusEl.textContent = "Copy failed"; }
-      setTimeout(()=>statusEl.textContent="Ready", 900);
-    });
-
-    function setStatus(t){ statusEl.textContent = t; }
-
-    // Pinned version. Nếu muốn tự-host pdfjs, thay 2 URL dưới bằng file local trong repo.
-    const PDFJS = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.2.67/build/pdf.min.mjs";
-    const WORKER = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.2.67/build/pdf.worker.min.mjs";
-
-    try{
-      setStatus("Loading PDF.js…");
-      const pdfjsLib = await import(PDFJS);
-      pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER;
-
-      setStatus("Loading PDF…");
-      const loadingTask = pdfjsLib.getDocument({
-        url: PDF_URL,
-        // CORS không cần nếu PDF nằm cùng domain
-        // withCredentials: false
-      });
-      const pdf = await loadingTask.promise;
-
-      const total = pdf.numPages;
-      setStatus(`Rendering ${total} pages…`);
-
-      // Render lần lượt để tránh đơ
-      for(let i=1;i<=total;i++){
-        const page = await pdf.getPage(i);
-
-        const wrapper = document.createElement("div");
-        wrapper.className = "page";
-        const canvas = document.createElement("canvas");
-        wrapper.appendChild(canvas);
-        pagesEl.appendChild(wrapper);
-
-        // Scale theo bề ngang container + devicePixelRatio để nét
-        const containerWidth = wrapper.clientWidth - 2; // trừ padding/border
-        const baseViewport = page.getViewport({ scale: 1 });
-        const scale = containerWidth / baseViewport.width;
-
-        const dpr = Math.max(1, window.devicePixelRatio || 1);
-        const viewport = page.getViewport({ scale: scale * dpr });
-
-        const ctx = canvas.getContext("2d", { alpha:false });
-        canvas.width = Math.floor(viewport.width);
-        canvas.height = Math.floor(viewport.height);
-        canvas.style.width = (viewport.width / dpr) + "px";
-        canvas.style.height = (viewport.height / dpr) + "px";
-
-        await page.render({ canvasContext: ctx, viewport }).promise;
-
-        setStatus(`Rendered ${i}/${total}`);
-      }
-
-      setStatus("Done");
-    }catch(e){
-      errEl.textContent = String(e?.stack || e);
-      setStatus("Error");
+    .hero{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
     }
-  </script>
-</body>
-</html>
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:center;
+    }
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+      .cover{max-width:260px}
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-size:34px;
+      letter-spacing:.2px;
+      line-height:1.2;
+    }
+    .sub{
+      margin:0 0 16px;
+      color:var
