@@ -7,16 +7,17 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-color: #D35400; /* Cam Đất sáng */
-            --accent-color: #F39C12;  /* Vàng Nghệ */
-            --bg-body: #FFFDF9;       /* Kem nhạt */
-            --bg-card: #FFFFFF;       /* Trắng tinh */
-            --text-main: #2C3E50;     /* Xám đen */
-            --border-color: #FDEBD0;  /* Viền vàng nhạt */
+            /* BẢNG MÀU MỚI: TRANG NGHIÊM & DỊU MẮT (ZEN STYLE) */
+            --primary-color: #5D4037; /* Nâu Gỗ Trầm */
+            --accent-color: #B08D55;  /* Vàng Đồng (Gold Muted) */
+            --bg-body: #F4F1EA;       /* Màu Giấy Điệp (Beige nhạt) */
+            --bg-card: #FFFFFF;       /* Trắng */
+            --text-main: #3E2723;     /* Nâu đen */
+            --border-color: #E0D6CC;  /* Viền nâu nhạt */
         }
 
         body {
@@ -26,15 +27,16 @@
             line-height: 1.9;
             margin: 0;
             padding: 0;
-            background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
-            background-size: 30px 30px;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         }
 
+        /* HEADER */
         header {
-            background: linear-gradient(to bottom, #FFF, #FFFDF9);
+            background-color: var(--bg-card);
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 40px;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .cover-container {
@@ -47,31 +49,33 @@
         .cover-image {
             width: 100%;
             height: auto;
-            max-height: 400px;
+            max-height: 380px;
             object-fit: cover;
             object-position: center top;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--primary-color);
             margin: 30px 10px 10px 10px;
             text-transform: uppercase;
-            text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             font-weight: normal;
-            color: #7F8C8D;
-            margin-top: 5px;
+            color: #6D4C41;
+            margin-top: 10px;
             font-style: italic;
-            padding: 0 20px;
+            border-top: 1px solid #eee;
+            display: inline-block;
+            padding-top: 10px;
         }
 
         .container {
@@ -80,13 +84,14 @@
             padding: 20px;
         }
 
+        /* CARD STYLE */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 35px;
-            box-shadow: 0 5px 20px rgba(211, 84, 0, 0.05);
+            border-radius: 8px; /* Bo góc nhẹ hơn cho trang nghiêm */
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
             position: relative;
         }
 
@@ -95,8 +100,8 @@
             top: 15px;
             right: 15px;
             font-size: 0.75rem;
-            color: #BDC3C7;
-            background: #F8F9F9;
+            color: #A1887F;
+            background: #EFEBE9;
             padding: 2px 8px;
             border-radius: 4px;
         }
@@ -105,20 +110,21 @@
             font-family: 'Playfair Display', serif;
             color: var(--primary-color);
             text-align: center;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             margin-top: 0;
             padding-bottom: 15px;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
+        /* KHUNG VĂN KINH */
         .mantra-box {
-            background-color: #FFFBF0;
+            background-color: #FAFAF5; /* Màu trắng ngà */
             padding: 25px;
-            border-left: 5px solid var(--accent-color);
+            border-left: 4px solid var(--primary-color); /* Viền nâu */
             margin: 20px 0;
             text-align: justify;
-            font-size: 1.1rem;
-            color: #34495E;
+            font-size: 1.15rem;
+            color: #4E342E;
         }
         
         .verse {
@@ -126,46 +132,64 @@
             font-style: italic;
             margin: 20px 0;
             font-weight: 500;
-            color: #5D6D7E;
+            color: #6D4C41;
         }
 
+        /* BUTTON DOWNLOAD - MÀU NÂU VÀNG */
         .btn-download {
             display: inline-block;
-            background: linear-gradient(to right, #D35400, #E67E22);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
+            background-color: var(--primary-color);
+            color: #fff; /* Màu chữ vàng nhạt */
+            padding: 12px 30px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
-            margin-bottom: 10px;
+            border: 1px solid var(--primary-color);
         }
         
         .btn-download:hover { 
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(211, 84, 0, 0.4);
+            background-color: #3E2723;
+            border-color: #3E2723;
+            color: #fff;
         }
 
         .download-wrapper {
             text-align: center;
             margin: 30px 0;
+            padding: 20px;
+            background: #EFEBE9;
+            border-radius: 8px;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 40px;
-            color: #95A5A6;
-            border-top: 1px solid #eee;
-            background-color: #fff;
-            margin-top: 50px;
+            padding: 50px 20px;
+            background-color: #FFF;
+            border-top: 4px solid var(--accent-color);
+            margin-top: 60px;
+        }
+
+        footer h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
-            .card { padding: 20px 15px; }
-            .mantra-box { padding: 15px; font-size: 1rem; }
+            .card { padding: 25px 15px; }
+            .mantra-box { padding: 15px; font-size: 1.05rem; }
             .cover-image { max-height: 250px; }
         }
     </style>
@@ -184,10 +208,10 @@
     <div class="container">
         
         <div class="download-wrapper">
+            <p style="margin-top: 0; font-style: italic; color: #5D4037;">Tải bản in gốc (PDF) để in ấn hoặc lưu trữ:</p>
             <a href="Kinh-Bach-Y-Cuu-Kho.pdf" class="btn-download" download>
-                📥 Tải Kinh PDF (Bản Gốc)
+                📥 Tải Kinh PDF
             </a>
-            <p style="font-size: 0.9em; color: #7f8c8d;">(Dành cho in ấn hoặc đọc offline)</p>
         </div>
 
         <div class="card">
@@ -422,8 +446,8 @@
     </div>
 
     <footer>
-        <p>Nam Mô A Di Đà Phật</p>
-        <p>© 2025</p>
+        <h4>Nam mô Đại Bi Quán Thế Âm Bồ Tát!!!</h4>
+        <p>© Thạnh Vương 2025</p>
     </footer>
 
 </body>
