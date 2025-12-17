@@ -11,12 +11,11 @@
 
     <style>
         :root {
-            /* BẢNG MÀU MỚI: SÁNG HƠN */
-            --primary-color: #D35400; /* Màu Cam Đất sáng */
-            --accent-color: #F39C12;  /* Màu Vàng Nghệ */
-            --bg-body: #FFFDF9;       /* Màu kem rất nhạt */
-            --bg-card: #FFFFFF;       /* Màu trắng tinh */
-            --text-main: #2C3E50;     /* Màu chữ xám đen dễ đọc */
+            --primary-color: #D35400; /* Cam Đất sáng */
+            --accent-color: #F39C12;  /* Vàng Nghệ */
+            --bg-body: #FFFDF9;       /* Kem nhạt */
+            --bg-card: #FFFFFF;       /* Trắng tinh */
+            --text-main: #2C3E50;     /* Xám đen */
             --border-color: #FDEBD0;  /* Viền vàng nhạt */
         }
 
@@ -27,12 +26,10 @@
             line-height: 1.9;
             margin: 0;
             padding: 0;
-            /* Họa tiết hoa sen chìm nhẹ nhàng */
             background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
             background-size: 30px 30px;
         }
 
-        /* --- HEADER & COVER IMAGE --- */
         header {
             background: linear-gradient(to bottom, #FFF, #FFFDF9);
             text-align: center;
@@ -47,12 +44,11 @@
             position: relative;
         }
 
-        /* Chỗ hiển thị hình ảnh bìa */
         .cover-image {
             width: 100%;
             height: auto;
-            max-height: 400px; /* Chiều cao tối đa */
-            object-fit: cover; /* Cắt ảnh đẹp nếu ảnh quá dài */
+            max-height: 400px;
+            object-fit: cover;
             object-position: center top;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -84,18 +80,16 @@
             padding: 20px;
         }
 
-        /* --- THẺ CHỨA NỘI DUNG (CARD) --- */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 35px;
             margin-bottom: 35px;
-            box-shadow: 0 5px 20px rgba(211, 84, 0, 0.05); /* Bóng mờ màu cam nhẹ */
+            box-shadow: 0 5px 20px rgba(211, 84, 0, 0.05);
             position: relative;
         }
 
-        /* Số trang nhỏ ở góc */
         .page-num {
             position: absolute;
             top: 15px;
@@ -117,9 +111,8 @@
             border-bottom: 2px solid var(--border-color);
         }
 
-        /* Khung chứa bài kinh/chú */
         .mantra-box {
-            background-color: #FFFBF0; /* Nền vàng kem sáng */
+            background-color: #FFFBF0;
             padding: 25px;
             border-left: 5px solid var(--accent-color);
             margin: 20px 0;
@@ -136,7 +129,6 @@
             color: #5D6D7E;
         }
 
-        /* Nút tải về - Màu cam nổi bật */
         .btn-download {
             display: inline-block;
             background: linear-gradient(to right, #D35400, #E67E22);
@@ -161,7 +153,6 @@
             margin: 30px 0;
         }
 
-        /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 40px;
@@ -171,7 +162,6 @@
             margin-top: 50px;
         }
 
-        /* --- RESPONSIVE MOBILE --- */
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .card { padding: 20px 15px; }
@@ -184,7 +174,7 @@
 
     <header>
         <div class="cover-container">
-            <img src="cover.jpg" alt="Hình Phật Quan Âm" class="cover-image" onerror="this.style.display='none'">
+            <img src="cover.jpg" alt="Phật Quan Âm" class="cover-image" onerror="this.style.display='none'">
         </div>
 
         <h1>Kinh Quan Thế Âm Bồ Tát</h1>
@@ -204,7 +194,7 @@
             <span class="page-num">Trang 2</span>
             <h3>Lời Nói Đầu</h3>
             <p>Trì Niệm Chú là những lời Bí Huyết của Đức Phật và Chư Tổ, Chú có rất nhiều công năng huyền diệu và mầu nhiệm phi thường. Những người nhứt tâm chuyên trì tụng niệm sẽ đạt được nhiều kết quả mỹ mãn.</p>
-            <p>Bạch Y Thần Chú thường xuyên tụng niệm sẽ cầu chi được nấy. [cite_start]Còn Chú Đại Bi và Chú Chuẩn Đề để trừ tà ma trì niệm được tăng sùng phúc đức, sở nguyện đắc thành. [cite: 4-8]</p>
+            <p>Bạch Y Thần Chú thường xuyên tụng niệm sẽ cầu chi được nấy. Còn Chú Đại Bi và Chú Chuẩn Đề để trừ tà ma trì niệm được tăng sùng phúc đức, sở nguyện đắc thành.</p>
         </div>
 
         <div class="card">
@@ -212,28 +202,28 @@
             <h3>Kinh Bạch Y Cứu Khổ</h3>
             
             <p><strong>Tịnh Pháp Giới Chơn Ngôn:</strong></p>
-            [cite_start]<div class="mantra-box">Án lam tỏa ha (3 lần) [cite: 10-11]</div>
+            <div class="mantra-box">Án lam tỏa ha (3 lần)</div>
 
             <p><strong>Tịnh Khẩu Nghiệp Chơn Ngôn:</strong></p>
-            [cite_start]<div class="mantra-box">Tu rị tu rị, ma ha tu rị, tu tu rị, ta bà ha (3 lần) [cite: 12-13]</div>
+            <div class="mantra-box">Tu rị tu rị, ma ha tu rị, tu tu rị, ta bà ha (3 lần)</div>
 
             <p><strong>Tịnh Tam Nghiệp Chơn Ngôn:</strong></p>
-            <div class="mantra-box">Án, ta phạ bà phạ, thuật đà ta phạ, đạt mạ ta phạ, bà phạ thuật độ hám. (3 lần) [cite_start][cite: 14-16]</div>
+            <div class="mantra-box">Án, ta phạ bà phạ, thuật đà ta phạ, đạt mạ ta phạ, bà phạ thuật độ hám. (3 lần)</div>
         </div>
 
         <div class="card">
             <span class="page-num">Trang 4-7</span>
             <h3>Chú Đại Bi</h3>
             <p style="text-align:center; color: #888; font-style: italic;">(Đọc lời thỉnh cầu trước khi đọc Chú Đại Bi)</p>
-            [cite_start]<p class="verse">Thỉnh cầu Nam Mô Đại Từ Đại Bi Cứu Khổ Cứu Nạn Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát Ma Ha Tát, phù hộ cho con (họ tên) thân thể khỏe mạnh, tăng cường công lực, để bản thân con có đủ năng lượng đọc tụng các Kinh, Chú khác. [cite: 18-19]</p>
+            <p class="verse">Thỉnh cầu Nam Mô Đại Từ Đại Bi Cứu Khổ Cứu Nạn Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát Ma Ha Tát, phù hộ cho con (họ tên) thân thể khỏe mạnh, tăng cường công lực, để bản thân con có đủ năng lượng đọc tụng các Kinh, Chú khác.</p>
             
-            [cite_start]<p><strong>Đọc chú:</strong> Nam mô Đại Bi Hội Thượng Phật Bồ Tát (3 lần) [cite: 20-22]</p>
+            <p><strong>Đọc chú:</strong> Nam mô Đại Bi Hội Thượng Phật Bồ Tát (3 lần)</p>
             
             <div class="mantra-box">
                 Thiên thủ thiên nhãn vô ngại Đại bi tâm đà la ni. Nam mô hắc ra đát na đa ra dạ da. Nam mô a rị da. Bà lô kiết đế thước bát ra da. Bồ đề tát đỏa bà da. Ma ha tát đỏa bà da. Ma ha ca lô ni ca da. Án, tát bàn ra phạt duệ. Số đát na đát tỏa.<br><br>
                 Nam mô tất kiết lật đỏa y mông a rị da. Bà lô kiết đế thất Phật ra lăng đà bà. Nam mô na ra cẩn trì. Hê rị, ma ha bàn đa sa mế. Tát bà a tha đậu du bằng. A thệ dựng. Tát bà tát đa, na ma bà già. Ma phạt đạt đậu, đát điệt tha. Án, a bà lô hê. Lô ca đế. Ca ra đế. Di hê rị. Ma ha bồ đề tát đỏa. Tát bà tát bà. Ma ra ma ra. Ma hê ma hê rị đà dựng. Cu lô cu lô kiết mông. Độ lô độ lô phạt xà da đế. Ma ha phạt xà da đế. Đà ra đà ra. Địa rị ni. Thất Phật ra da. Dá ra dá ra. Mạ mạ phạt ma ra. Mục để lệ. Y hê di hê. Thất na thất na. A ra sâm Phật ra xá lợi. Phạt sa phạt sâm. Phật ra xá da. Hô lô hô lô ma ra. Hô lô hô lô hê rị. Ta ra ta ra. Tất rị tất rị. Tô rô tô rô. Bồ đề dạ bồ đề dạ. Bồ đà dạ bồ đà dạ. Di đế rị dạ. Na ra cẩn trì. Địa rị sắc ni na. Ba dạ ma na, ta bà ha. Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha.<br><br>
                 Na ra cẩn trì, ta bà ha. Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha. Ta bà ma ha a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha. Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lợi thắng yết ra dạ, ta bà ha. Nam mô hắc ra đát na đa ra dạ da. Nam mô a rị da, bà lô kiết đế, thước bàn ra dạ, ta bà ha.<br><br>
-                [cite_start]<strong>Án, tất điện đô, mạn đa ra, bạt đà dạ, ta bà hà.</strong> (3 lần khi trì biến cuối cùng) [cite: 23-78]
+                <strong>Án, tất điện đô, mạn đa ra, bạt đà dạ, ta bà hà.</strong> (3 lần khi trì biến cuối cùng)
             </div>
             <p style="text-align: center; font-size: 0.9em; font-style: italic;">* Đọc 1 - 3 - 7 - 9 – 12 – 18 – 21 biến.</p>
         </div>
@@ -243,29 +233,29 @@
             <h3>Các Thần Chú</h3>
             
             <p><strong>An Thổ Địa Chân Ngôn:</strong></p>
-            <div class="mantra-box">Nam mô tam mãn đà, một đà nẫm. [cite_start]Án, tô rô tô rô, địa vĩ ta bà ha (3 lần) [cite: 80-81]</div>
+            <div class="mantra-box">Nam mô tam mãn đà, một đà nẫm. Án, tô rô tô rô, địa vĩ ta bà ha (3 lần)</div>
 
             <p><strong>Văn Thù Hộ Thân Chân Ngôn:</strong></p>
-            [cite_start]<div class="mantra-box">Án sĩ lâm bộ lâm (7 lần) [cite: 82-83]</div>
+            <div class="mantra-box">Án sĩ lâm bộ lâm (7 lần)</div>
 
             <p><strong>Lục Tự Đại Minh Chân Ngôn:</strong></p>
-            [cite_start]<div class="mantra-box">Án ma ni bát mi hum (7 lần) [cite: 84-85]</div>
+            <div class="mantra-box">Án ma ni bát mi hum (7 lần)</div>
 
             <p><strong>Đại Phật Đỉnh Thủ Lăng Nghiêm Tâm Chú:</strong></p>
-            <div class="mantra-box">Án, a na lệ, Tỳ xá đề, Bệ ra bạt xà ra đà rị, Bàn đà bàn đà nể, Bạt xà ra bàn ni phấn, Hổ hồng, đô lô ung phấn, ta bà ha. (7 lần) [cite_start][cite: 86-92]</div>
+            <div class="mantra-box">Án, a na lệ, Tỳ xá đề, Bệ ra bạt xà ra đà rị, Bàn đà bàn đà nể, Bạt xà ra bàn ni phấn, Hổ hồng, đô lô ung phấn, ta bà ha. (7 lần)</div>
         </div>
 
         <div class="card">
             <span class="page-num">Trang 9</span>
             <h3>Bạch Y Quán Thế Âm Đại Sĩ Linh Cảm Thần Chú</h3>
             
-            <p class="verse">Nam Mô Đại Từ Bi Cứu Khổ Cứu Nạn, Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát! (3 lần) [cite_start][cite: 93-95]</p>
-            <p class="verse">Nam mô Phật! Nam mô Pháp! Nam mô Tăng! [cite_start]Nam mô cứu khổ cứu nạn Quán Thế Âm Bồ Tát! [cite: 96-99]</p>
+            <p class="verse">Nam Mô Đại Từ Bi Cứu Khổ Cứu Nạn, Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát! (3 lần)</p>
+            <p class="verse">Nam mô Phật! Nam mô Pháp! Nam mô Tăng! Nam mô cứu khổ cứu nạn Quán Thế Âm Bồ Tát!</p>
             
             <div class="mantra-box">
                 Đát điệt đa. Án già la phạt đa. Già la phạt đa. Già la phạt đa. La già phạt đa. La già phạt đa, sa bà ha.<br>
                 Thiên la thần, Thiên địa thần. Nhân ly nạn, Nạn ly thân. Nhất thiết tai ương hóa vi trần.<br>
-                [cite_start]Nam mô ma ha bát nhã ba la mật. [cite: 100-111]
+                Nam mô ma ha bát nhã ba la mật.
             </div>
         </div>
 
@@ -273,30 +263,30 @@
             <span class="page-num">Trang 10-12</span>
             <h3>Kinh Quán Âm Cứu Khổ</h3>
             
-            <p class="verse">Nam Mô Đại Từ Bi Cứu Khổ Cứu Nạn, Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát! (3 lần) [cite_start][cite: 112-114]</p>
-            <p class="verse">Nam mô Phật! Nam mô Pháp! [cite_start]Nam mô Tăng! [cite: 115-116]</p>
+            <p class="verse">Nam Mô Đại Từ Bi Cứu Khổ Cứu Nạn, Quảng Đại Linh Cảm Quán Thế Âm Bồ Tát! (3 lần)</p>
+            <p class="verse">Nam mô Phật! Nam mô Pháp! Nam mô Tăng!</p>
             
             <div class="mantra-box">
                 Bách thiên vạn ức Phật, Hằng hà sa số Phật, Vô lượng công đức Phật. Phật cáo A Nan ngôn. Thử kinh đại thánh, Năng cứu ngục tù, Năng cứu trọng bệnh, Năng cứu bách nạn khổ.<br>
                 Nhược hữu nhân, Độc tụng nhất thiên biến, Nhất thân ly khổ nạn. Độc tụng nhất vạn biến, Toàn gia ly khổ nạn.<br>
                 Nam mô Phật lực uy. Nam mô Phật lực hộ. Linh nhân thân đắc độ. Hồi quang Bồ Tát, Hồi thiện Bồ Tát, A nốc Đại thiên vương, Chính thiện Bồ Tát.<br>
                 Ma hưu, Ma hưu, Thanh tịnh Tỳ khiệu, Quan sự đắc tán, Tự sự đắc hưu. Chư đại Bồ Tát, Ngũ bách A la hán. Cứu hộ đệ tử (họ và tên) thân, Tất giai ly khổ nạn.<br>
-                Tự nhiên Quán Thế Âm, Anh lạc bất tu giải. Cần độc thiên vạn biến, Nhất thiết tai ương, Tự nhiên đắc giải thoát. [cite_start]Tín thụ phụng hành. [cite: 117-128]
+                Tự nhiên Quán Thế Âm, Anh lạc bất tu giải. Cần độc thiên vạn biến, Nhất thiết tai ương, Tự nhiên đắc giải thoát. Tín thụ phụng hành.
             </div>
             
             <p><strong>Tức thuyết chân ngôn viết:</strong></p>
             <div class="mantra-box">
-                [cite_start]Kim ba kim ba đế, Cầu ha cầu ha đế, Đà la ni đế, ni a ca đế, Tỷ lê nễ đế, ma ha ca đế, Chân lăng càn đế, Bồ đề tát bà ha. [cite: 129-133]
+                Kim ba kim ba đế, Cầu ha cầu ha đế, Đà la ni đế, ni a ca đế, Tỷ lê nễ đế, ma ha ca đế, Chân lăng càn đế, Bồ đề tát bà ha.
             </div>
 
-            <p class="verse">Nam Mô Đại Từ Đại Bi, Tầm Thinh Cứu Khổ Cứu Nạn Linh Cảm Quán Thế Âm Bồ Tát Ma Ha Tát !!! (Niệm 3, 10 hoặc 108 lần) [cite_start][cite: 134-135]</p>
+            <p class="verse">Nam Mô Đại Từ Đại Bi, Tầm Thinh Cứu Khổ Cứu Nạn Linh Cảm Quán Thế Âm Bồ Tát Ma Ha Tát !!! (Niệm 3, 10 hoặc 108 lần)</p>
             
             <div class="mantra-box">
                 Nam mô Phật! Nam mô Pháp! Nam mô Tăng!<br>
                 Phật quốc hữu duyên, Phật pháp tướng nhân, Thường, lạc, ngã, tịnh.<br>
                 Chiều niệm Quán Thế Âm, Niệm niệm lòng tâm khởi, Niệm Phật Bất ly thân.<br>
                 Thiên la thần, Thiên địa thần. Nhân ly nạn, Nạn ly thân. Nhất thiết tai ương hóa vi trần.<br>
-                [cite_start]Nam Mô Quán Thế Âm Bồ Tát Ma Ha Tát (3 lần) [cite: 136-149]
+                Nam Mô Quán Thế Âm Bồ Tát Ma Ha Tát (3 lần)
             </div>
         </div>
 
@@ -308,7 +298,7 @@
             <p class="verse">
                 Phổ môn thị hiện, Cứu khổ tầm thanh,<br>
                 Từ bi thuyết pháp độ mê tân, Phó cảm ứng tùy hình,<br>
-                [cite_start]Tứ hải thanh minh, Bát nạn vĩnh vô xâm. [cite: 151-157]
+                Tứ hải thanh minh, Bát nạn vĩnh vô xâm.
             </p>
 
             <p><strong>Quán Âm Tán:</strong></p>
@@ -316,14 +306,14 @@
                 Quán âm đại sĩ, Phổ hiệu viên thông,<br>
                 Thập nhị đại nguyện thệ hoằng thâm, Khổ hải phiếm từ phong,<br>
                 Phổ tế tâm dung, Sát sát hiện vô cùng,<br>
-                [cite_start]Nam Mô Thánh Quán Tự Tại Bồ Tát Ma Ha Tát (3 lần) [cite: 158-166]
+                Nam Mô Thánh Quán Tự Tại Bồ Tát Ma Ha Tát (3 lần)
             </p>
 
             <p><strong>Phật Mẫu Chuẩn Đề Thần Chú:</strong></p>
             <div class="mantra-box">
                 Khể thủ quy y Tô tất đế, Đầu diện đảnh lễ thất cu chi. Ngã kim xưng tán Đại Chuẩn Đề, Duy nguyện từ bi thùy gia hộ.<br>
                 Nam Mô tát đa tát nẫm tam miệu tam bồ đề, Cu chi nẫm, đát điệt tha.<br>
-                [cite_start]Án, chiếc lệ chủ lệ Chuẩn Đề, ta bà ha. [cite: 167-172]
+                Án, chiếc lệ chủ lệ Chuẩn Đề, ta bà ha.
             </div>
         </div>
 
@@ -335,7 +325,7 @@
                 Án sĩ lâm<br>
                 Án ma ni bát di hồng<br>
                 Án, chiếc lệ chủ lệ Chuẩn đề, ta bà ha.<br>
-                [cite_start]Án bộ lâm. [cite: 173-177]
+                Án bộ lâm.
             </div>
         </div>
 
@@ -354,7 +344,7 @@
                 <li style="margin-bottom: 10px;"><strong>9.</strong> Nam mô tạo Pháp thuyền, du khổ hải, Quán Âm Như Lai, độ tận chúng sanh nguyện.</li>
                 <li style="margin-bottom: 10px;"><strong>10.</strong> Nam mô tiền tràng phan, hậu bảo cái, Quán Âm Như Lai, tiếp dẫn Tây Phương nguyện.</li>
                 <li style="margin-bottom: 10px;"><strong>11.</strong> Nam mô Vô Lượng Thọ Phật cảnh giới, Quán Âm Như Lai, Di Đà thọ ký nguyện.</li>
-                [cite_start]<li style="margin-bottom: 10px;"><strong>12.</strong> Nam mô đoan nghiêm thân, vô tỷ tái, Quán Âm Như Lai, quả tu thập nhị nguyện. [cite: 178-191]</li>
+                <li style="margin-bottom: 10px;"><strong>12.</strong> Nam mô đoan nghiêm thân, vô tỷ tái, Quán Âm Như Lai, quả tu thập nhị nguyện.</li>
             </ul>
         </div>
 
@@ -368,7 +358,7 @@
                 Tam thế chư Phật, y Bát nhã Ba la mật đa cố, đắc A nậu đa la Tam miệu Tam bồ đề. Cố tri Bát nhã Ba la mật đa, thị đại thần chú, thị đại minh chú, thị vô thượng chú, thị vô đẳng đẳng chú, năng trừ nhất thiết khổ, chơn thiệt bất hư.<br><br>
                 Cố thuyết Bát nhã Ba la mật đa chú, tức thuyết chú viết:
             </div>
-            <p class="verse" style="font-size: 1.2rem; color: var(--primary-color);"><strong>Yết đế yết đế, ba la yết đế, ba la tăng yết đế, Bồ Đề tát bà ha. (3 lần)[cite_start]</strong> [cite: 192-205]</p>
+            <p class="verse" style="font-size: 1.2rem; color: var(--primary-color);"><strong>Yết đế yết đế, ba la yết đế, ba la tăng yết đế, Bồ Đề tát bà ha. (3 lần)</strong></p>
         </div>
 
         <div class="card">
@@ -377,7 +367,7 @@
             
             <p><strong>Vãng Sanh Tịnh Độ Thần Chú:</strong></p>
             <div class="mantra-box">
-                Nam mô a di đa bà dạ. Đa tha dà đa dạ. Đa địa dạ tha. A di rị đô bà tỷ. A di rị đa tất đam bà tỳ. A di rị đa tì ca lan đế. A di rị đa, tì ca lan đa. Dà di nị dà dà na. Chỉ đa ca lệ ta bà ha. (3 biến) [cite_start][cite: 206-214]
+                Nam mô a di đa bà dạ. Đa tha dà đa dạ. Đa địa dạ tha. A di rị đô bà tỷ. A di rị đa tất đam bà tỳ. A di rị đa tì ca lan đế. A di rị đa, tì ca lan đa. Dà di nị dà dà na. Chỉ đa ca lệ ta bà ha. (3 biến)
             </div>
 
             <p><strong>Hồi Hướng:</strong></p>
@@ -387,7 +377,7 @@
                 Nguyện tiêu ba chướng sạch phiền não, Nguyện được trí tuệ thật sáng ngời,<br>
                 Nguyện các tội chướng thảy tiêu trừ, Đời đời thường hành Bồ Tát đạo,<br>
                 Nguyện đem công đức tu hành này, Chan rải mười phương khắp tất cả,<br>
-                [cite_start]Đồng được lên ngôi Vô Thượng Giác. [cite: 216-217]
+                Đồng được lên ngôi Vô Thượng Giác.
             </p>
         </div>
 
@@ -397,7 +387,7 @@
             <ul style="list-style: none; padding: 0; text-align: center;">
                 <li style="margin-bottom: 15px;">Tự quy y Phật, nguyện cho chúng sinh, Hiểu thấu đạo lớn, phát tâm Vô Thượng. (1 lễ)</li>
                 <li style="margin-bottom: 15px;">Tự quy y Pháp, nguyện cho chúng sinh, Thâm nhập kinh tạng, trí tuệ như biển. (1 lễ)</li>
-                <li style="margin-bottom: 15px;">Tự quy y Tăng, nguyện cho chúng sinh, Quản lý đại chúng, hết thảy không ngại. (1 lễ) [cite_start][cite: 218-223]</li>
+                <li style="margin-bottom: 15px;">Tự quy y Tăng, nguyện cho chúng sinh, Quản lý đại chúng, hết thảy không ngại. (1 lễ)</li>
             </ul>
         </div>
 
@@ -419,14 +409,14 @@
                 <li>Tháng Mười Một: 19</li>
                 <li>Tháng Chạp không chay.</li>
             </ul>
-            [cite_start]<p style="text-align: center; margin-top: 20px;"><em>*Tháng Nhuận theo tháng chánh.</em> [cite: 224-238]</p>
+            <p style="text-align: center; margin-top: 20px;"><em>*Tháng Nhuận theo tháng chánh.</em></p>
         </div>
 
         <div class="card">
             <span class="page-num">Trang 22</span>
             <h3>Gieo Duyên</h3>
             <p style="text-align: center; font-weight: bold; color: var(--primary-color);">Nam mô Đại Bi Quán Thế Âm Bồ Tát!!!</p>
-            [cite_start]<p>Mình xin gieo duyên quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi – Chú Chuẩn Đề - Bát Nhã Tâm Kinh”, mong ai hữu duyên thọ nhận được quyển kinh này đạt được sự hộ trì của Quan Thế Âm Bồ Tát để có sự vô úy để vượt lên các vấn nạn, biết quay về Phật pháp và không thối thất khi đi theo ánh sáng của Quan Thế Âm Bồ Tát. [cite: 240-241]</p>
+            <p>Mình xin gieo duyên quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi – Chú Chuẩn Đề - Bát Nhã Tâm Kinh”, mong ai hữu duyên thọ nhận được quyển kinh này đạt được sự hộ trì của Quan Thế Âm Bồ Tát để có sự vô úy để vượt lên các vấn nạn, biết quay về Phật pháp và không thối thất khi đi theo ánh sáng của Quan Thế Âm Bồ Tát.</p>
         </div>
 
     </div>
