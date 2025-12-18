@@ -37,34 +37,15 @@
             background-color: var(--charcoal);
             color: var(--ice-blue);
             text-align: center;
-            padding-bottom: 50px;
+            padding: 40px 20px 50px; /* Tăng khoảng cách */
             border-bottom: 5px solid var(--teal);
-        }
-
-        .cover-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            padding-top: 20px;
-        }
-
-        .cover-image {
-            width: calc(100% - 40px);
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 8px;
-            border: 4px solid var(--teal);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: var(--ice-blue);
-            margin: 30px 10px 10px 10px;
+            margin: 0 0 10px 0;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -114,6 +95,22 @@
             color: var(--teal);
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
+        }
+
+        /* KHUNG CHỨA ẢNH (ĐÃ SỬA ĐỂ KHÔNG BỊ CẮT) */
+        .cover-container {
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: auto; /* Tự động chiều cao theo tỉ lệ ảnh */
+            border-radius: 8px;
+            border: 4px solid var(--teal);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: block;
         }
 
         /* CARD STYLE */
@@ -247,8 +244,7 @@
             h1 { font-size: 1.8rem; }
             .card { padding: 25px 15px; }
             .mantra-box { padding: 15px; font-size: 1.05rem; }
-            .cover-image { width: 100%; border-width: 2px; }
-            .container { margin-top: 0; }
+            .container { margin-top: -20px; }
             .ngay-trai-list { grid-template-columns: 1fr; }
         }
     </style>
@@ -256,9 +252,6 @@
 <body>
 
     <header>
-        <div class="cover-container">
-            <img src="cover.jpg" alt="Phật Quan Âm" class="cover-image" onerror="this.style.display='none'">
-        </div>
         <h1>Kinh Quan Thế Âm Bồ Tát</h1>
         <h2>Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh</h2>
     </header>
@@ -268,6 +261,10 @@
         <div class="date-display" id="date-display">
             <div class="date-item solar-date" id="solar-date">Đang tải ngày...</div>
             <div class="date-item lunar-date" id="lunar-date"></div>
+        </div>
+
+        <div class="cover-container">
+            <img src="cover.jpg" alt="Phật Quan Âm" class="cover-image" onerror="this.style.display='none'">
         </div>
 
         <div class="download-wrapper">
@@ -485,7 +482,7 @@
             <div class="mantra-box">
                 Kim ba kim ba đế,<br>
                 Cầu ha cầu ha đế,<br>
-                Đa la ni đế, ni ha la đế,<br>
+                Đà la ni đế, ni ha la đế,<br>
                 Tì lê nễ đế, ma ha dà đế,<br>
                 Chơn lăng càn đế,<br>
                 Bồ đề tát bà ha
@@ -708,10 +705,10 @@
             <span class="page-num">21</span>
             <h3>Gieo Duyên</h3>
             <div class="mantra-box">
-               <p>Mình xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.</p>
+               <p>Thạnh Vương xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.</p>
                
                <p><strong>Đăng ký thỉnh kinh:</strong><br>
-               Quý vị hoan hỉ điền đầy đủ thông tin vào biểu mẫu bên dưới. Mình sẽ tổng hợp và gửi kinh qua đường bưu điện vào <strong>mùng 9 – 19 hằng tháng</strong>.</p>
+               Quý vị hoan hỉ điền đầy đủ thông tin vào biểu mẫu bên dưới. Thạnh Vương sẽ tổng hợp và gửi kinh qua đường bưu điện vào <strong>mùng 9 – 19 hằng tháng</strong>.</p>
 
                <iframe src="https://cz2ow55fbm.sg.larksuite.com/share/base/form/shrlgiHQDsHVT5EGSI4eO0lo2jb" width="100%" height="800" frameborder="0" style="border: 1px solid #ddd; border-radius: 8px; margin-top: 15px;"></iframe>
                <br><br>
