@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinh Quan Thế Âm Bồ Tát</title>
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFER2G2XEH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFER2G2XEH');
+    
+      gtag('config', 'G-XNK7CCSEQ9');
+
+      gtag('config', 'G-ZMLV9J5R5W');
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
@@ -37,7 +50,7 @@
             background-color: var(--charcoal);
             color: var(--ice-blue);
             text-align: center;
-            padding: 40px 20px 50px; /* Tăng khoảng cách */
+            padding: 40px 20px 50px;
             border-bottom: 5px solid var(--teal);
         }
 
@@ -97,7 +110,7 @@
             font-size: 1.2rem;
         }
 
-        /* KHUNG CHỨA ẢNH (ĐÃ SỬA ĐỂ KHÔNG BỊ CẮT) */
+        /* KHUNG CHỨA ẢNH */
         .cover-container {
             width: 100%;
             margin-bottom: 40px;
@@ -106,7 +119,7 @@
 
         .cover-image {
             width: 100%;
-            height: auto; /* Tự động chiều cao theo tỉ lệ ảnh */
+            height: auto;
             border-radius: 8px;
             border: 4px solid var(--teal);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -482,7 +495,7 @@
             <div class="mantra-box">
                 Kim ba kim ba đế,<br>
                 Cầu ha cầu ha đế,<br>
-                Đà la ni đế, ni ha la đế,<br>
+                Đa la ni đế, ni ha la đế,<br>
                 Tì lê nễ đế, ma ha dà đế,<br>
                 Chơn lăng càn đế,<br>
                 Bồ đề tát bà ha
@@ -705,10 +718,10 @@
             <span class="page-num">21</span>
             <h3>Gieo Duyên</h3>
             <div class="mantra-box">
-               <p>Thạnh Vương xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.</p>
+               <p>Mình xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.</p>
                
                <p><strong>Đăng ký thỉnh kinh:</strong><br>
-               Quý vị hoan hỉ điền đầy đủ thông tin vào biểu mẫu bên dưới. Thạnh Vương sẽ tổng hợp và gửi kinh qua đường bưu điện vào <strong>mùng 9 – 19 hằng tháng</strong>.</p>
+               Quý vị hoan hỉ điền đầy đủ thông tin vào biểu mẫu bên dưới. Mình sẽ tổng hợp và gửi kinh qua đường bưu điện vào <strong>mùng 9 – 19 hằng tháng</strong>.</p>
 
                <iframe src="https://cz2ow55fbm.sg.larksuite.com/share/base/form/shrlgiHQDsHVT5EGSI4eO0lo2jb" width="100%" height="800" frameborder="0" style="border: 1px solid #ddd; border-radius: 8px; margin-top: 15px;"></iframe>
                <br><br>
@@ -727,11 +740,32 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Lấy tham số 'source' hoặc 'utm_source' từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source') || urlParams.get('utm_source');
+            const referrer = document.referrer;
+
+            // In ra console để kiểm tra (F12)
+            console.log("Truy cập từ:", source || "Trực tiếp/Không xác định");
+            console.log("Nguồn giới thiệu (Referrer):", referrer);
+
+            // Gửi dữ liệu này về Google Analytics (Nếu đã cài đặt GA4)
+            if (typeof gtag === 'function') {
+                gtag('event', 'page_view', {
+                    'traffic_source': source || 'direct',
+                    'referrer': referrer
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
             // 1. Lấy ngày dương lịch
             const today = new Date();
             const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
             
-            const solarStr = `${days[today.getDay()]}, ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()} (Phương Tây)`;
+            const solarStr = `${days[today.getDay()]}, ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()} (Lịch Phương Tây)`;
             document.getElementById("solar-date").innerText = solarStr;
 
             // 2. Lấy ngày âm lịch (Dùng Intl API sẵn có)
@@ -762,7 +796,7 @@
                 let chiIndex = yearVal % 12;
                 let yearName = `${can[canIndex]} ${chi[chiIndex]}`;
 
-                document.getElementById("lunar-date").innerText = `Ngày ${lDay} Tháng ${lMonth} Năm ${yearName} (Phương Đông)`;
+                document.getElementById("lunar-date").innerText = `Ngày ${lDay} Tháng ${lMonth} Năm ${yearName} (Lịch Phương Đông)`;
             } catch (e) {
                 console.error("Lỗi tính lịch âm:", e);
                 document.getElementById("lunar-date").innerText = "Ngày Âm: (Đang cập nhật)";
