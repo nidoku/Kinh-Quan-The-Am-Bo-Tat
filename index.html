@@ -89,6 +89,33 @@
             z-index: 10;
         }
 
+        /* KHUNG HIỂN THỊ NGÀY THÁNG */
+        .date-display {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+            border: 1px solid var(--teal);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .date-item {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .solar-date {
+            color: var(--charcoal);
+            font-weight: bold;
+        }
+
+        .lunar-date {
+            color: var(--teal);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
         /* CARD STYLE */
         .card {
             background: var(--white);
@@ -235,13 +262,20 @@
         <h1>Kinh Quan Thế Âm Bồ Tát</h1>
         <h2>Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh</h2>
     </header>
+
+    <div class="container">
+        
+        <div class="date-display" id="date-display">
+            <div class="date-item solar-date" id="solar-date">Đang tải ngày...</div>
+            <div class="date-item lunar-date" id="lunar-date"></div>
+        </div>
+
         <div class="download-wrapper">
             <p style="margin-top: 0; margin-bottom: 20px; color: #546E7A;">Tải bản in gốc (PDF) để in ấn hoặc lưu trữ:</p>
-            <a href="Kinh-Quan-The-Am-Bo-Tat.pdf" class="btn-download" download>
+            <a href="Kinh Quan The Am Bo Tat.pdf" class="btn-download" download>
                 📥 Tải Kinh PDF
             </a>
         </div>
-
 
         <div class="card">
             <span class="page-num">01</span>
@@ -451,7 +485,7 @@
             <div class="mantra-box">
                 Kim ba kim ba đế,<br>
                 Cầu ha cầu ha đế,<br>
-                Đa la ni đế, ni ha la đế,<br>
+                Đà la ni đế, ni ha la đế,<br>
                 Tì lê nễ đế, ma ha dà đế,<br>
                 Chơn lăng càn đế,<br>
                 Bồ đề tát bà ha
@@ -642,22 +676,6 @@
         </div>
 
         <div class="card">
-            <span class="page-num">21</span>
-            <h3>Gieo Duyên</h3>
-            <div class="mantra-box">
-               Mình xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.<br><br>
-               <strong>Cách thỉnh kinh:</strong><br>
-               • Vui lòng liên hệ Thạnh Vương bằng cách quét QR Code bên trái và điền thông tin để mình gửi kinh qua đường bưu điện vào mùng 9 – 19 hằng tháng.<br>
-               • QR Code bên phải: dành cho người muốn tải bản in hoặc đọc online.<br><br>
-               <strong>Nam mô Đại Bi Quan Thế Âm Bồ Tát!!!</strong><br><br>
-               <span style="font-size: 0.9em; font-style: italic;">Biên soạn: Thạnh Vương - Bìa: Huy Quang - Dàn trang & Mỹ thuật: Nhật Minh</span>
-            </div>
-        </div>
-    <div class="container">
-        
-
-
-        <div class="card">
             <h3>Thư Viện Âm Thanh Diệu Âm</h3>
             <p style="text-align: center; font-style: italic; color: #78909C; margin-bottom: 20px;">Lắng lòng nghe, lắng lòng nghe. Tiếng chuông huyền diệu đưa về nhất tâm.</p>
             
@@ -685,12 +703,75 @@
             </div>
             <p class="note" style="text-align: center;">* Nếu không nghe được, vui lòng kiểm tra lại file mp3 đã được tải lên chưa.</p>
         </div>
+
+        <div class="card">
+            <span class="page-num">21</span>
+            <h3>Gieo Duyên</h3>
+            <div class="mantra-box">
+               <p>Mình xin gieo duyên ấn tống và gửi tặng quyển kinh trì chú của Quán Thế Âm Bồ Tát – “Kinh Bạch Y Cứu Khổ - Chú Đại Bi - Chú Chuẩn Đề - Bát Nhã Tâm Kinh”. Ai hữu duyên thỉnh kinh luôn được Phật từ bi gia hộ, chứng đắt đạo Bồ Đề.</p>
+               
+               <p><strong>Đăng ký thỉnh kinh:</strong><br>
+               Quý vị hoan hỉ điền đầy đủ thông tin vào biểu mẫu bên dưới. Mình sẽ tổng hợp và gửi kinh qua đường bưu điện vào <strong>mùng 9 – 19 hằng tháng</strong>.</p>
+
+               <iframe src="https://cz2ow55fbm.sg.larksuite.com/share/base/form/shrlgiHQDsHVT5EGSI4eO0lo2jb" width="100%" height="800" frameborder="0" style="border: 1px solid #ddd; border-radius: 8px; margin-top: 15px;"></iframe>
+               <br><br>
+
+               <strong>Nam mô Đại Bi Quan Thế Âm Bồ Tát!!!</strong><br><br>
+               <span style="font-size: 0.9em; font-style: italic;">Biên soạn: Thạnh Vương - Bìa: Huy Quang - Dàn trang & Mỹ thuật: Nhật Minh</span>
+            </div>
+        </div>
+
     </div>
 
     <footer>
         <h4>Nam mô Đại Bi Quan Thế Âm Bồ Tát!!!</h4>
         <p>© Thạnh Vương 2025</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Lấy ngày dương lịch
+            const today = new Date();
+            const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+            
+            const solarStr = `${days[today.getDay()]}, ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()} (Dương Lịch)`;
+            document.getElementById("solar-date").innerText = solarStr;
+
+            // 2. Lấy ngày âm lịch (Dùng Intl API sẵn có)
+            try {
+                const lunarFormatter = new Intl.DateTimeFormat('vi-VN', {
+                    calendar: 'chinese',
+                    day: 'numeric',
+                    month: 'numeric',
+                    year: 'numeric'
+                });
+                
+                const parts = lunarFormatter.formatToParts(today);
+                let lDay, lMonth, lYear;
+                
+                parts.forEach(p => {
+                    if(p.type === 'day') lDay = p.value;
+                    if(p.type === 'month') lMonth = p.value;
+                    if(p.type === 'year') lYear = p.value;
+                });
+
+                // Tính Can Chi cho năm
+                const can = ["Canh", "Tân", "Nhâm", "Quý", "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ"];
+                const chi = ["Thân", "Dậu", "Tuất", "Hợi", "Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi"];
+                
+                // Năm gốc 1900 là năm Canh Tý (0, 4)
+                let yearVal = today.getFullYear();
+                let canIndex = yearVal % 10;
+                let chiIndex = yearVal % 12;
+                let yearName = `${can[canIndex]} ${chi[chiIndex]}`;
+
+                document.getElementById("lunar-date").innerText = `Ngày ${lDay} Tháng ${lMonth} Năm ${yearName} (Âm Lịch)`;
+            } catch (e) {
+                console.error("Lỗi tính lịch âm:", e);
+                document.getElementById("lunar-date").innerText = "Ngày Âm: (Đang cập nhật)";
+            }
+        });
+    </script>
 
 </body>
 </html>
