@@ -1,7 +1,7 @@
 # Landing page: Thỉnh kinh Quán Thế Âm Bồ Tát
 
 - `index.html`: trang landingpage (toàn văn kinh + nút tải PDF)
-- `Kinh-Bạch-Y-Cứu-Khổ.pdf`: file PDF để tải
+- `Kinh-Quan-The-Am-Bo-Tat.pdf`: file PDF để tải
 
 ## Publish bằng GitHub Pages
 1. Tạo repo mới trên GitHub.
