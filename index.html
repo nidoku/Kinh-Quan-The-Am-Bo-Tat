@@ -731,7 +731,7 @@
             const today = new Date();
             const days = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
             
-            const solarStr = `${days[today.getDay()]}, ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()} (Dương Lịch)`;
+            const solarStr = `${days[today.getDay()]}, ngày ${today.getDate()} tháng ${today.getMonth() + 1} năm ${today.getFullYear()} (Phương Tây)`;
             document.getElementById("solar-date").innerText = solarStr;
 
             // 2. Lấy ngày âm lịch (Dùng Intl API sẵn có)
@@ -762,7 +762,7 @@
                 let chiIndex = yearVal % 12;
                 let yearName = `${can[canIndex]} ${chi[chiIndex]}`;
 
-                document.getElementById("lunar-date").innerText = `Ngày ${lDay} Tháng ${lMonth} Năm ${yearName} (Âm Lịch)`;
+                document.getElementById("lunar-date").innerText = `Ngày ${lDay} Tháng ${lMonth} Năm ${yearName} (Phương Đông)`;
             } catch (e) {
                 console.error("Lỗi tính lịch âm:", e);
                 document.getElementById("lunar-date").innerText = "Ngày Âm: (Đang cập nhật)";
